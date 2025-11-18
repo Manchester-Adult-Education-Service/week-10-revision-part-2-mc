@@ -82,7 +82,13 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def print_welcome(name):
+    print(f"Welcome to the Cinema Booking System, {name}!")
+print_welcome("Darren")
 
+def print_movie_info(title, duration):
+    print(f"Movie: {title}\nDuration: {duration} minutes")
+print_movie_info("The Godfather", 120)
 
 
 
@@ -134,7 +140,15 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def get_customer_name():
+    name = input("Enter your name: ")
+    return print(name)
+get_customer_name()
 
+def get_movie_title():
+    movie_title = input("Enter Movie Title: ")
+    return print(movie_title)
+get_movie_title()
 
 
 
