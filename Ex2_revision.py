@@ -85,13 +85,16 @@ print("-------------------------------------------\n"
 def print_welcome(name):
     print(f"Welcome to the Cinema Booking System, {name}!")
 print_welcome("Darren")
-
+print()
 def print_movie_info(title, duration):
     print(f"Movie: {title}\nDuration: {duration} minutes")
 print_movie_info("The Godfather", 120)
-
-
-
+print()
+def print_booking_summary(name, movie, seats):
+    print("--- Booking Summary ---")
+    print(f"Customer: {name}\nMovie: {movie}\nSeats: {seats}\n-----------------------")
+print_booking_summary("Darren", "The Godfather", "2")
+print()
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -140,17 +143,28 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+print()
 def get_customer_name():
     name = input("Enter your name: ")
-    return print(name)
-get_customer_name()
+    return name
 
 def get_movie_title():
     movie_title = input("Enter Movie Title: ")
-    return print(movie_title)
-get_movie_title()
+    return movie_title
+
+def get_number_of_seats():
+    num_seats = int(input("How many seats? "))
+    return num_seats
 
 
+
+customer = get_customer_name()
+movie = get_movie_title()
+seats = get_number_of_seats()
+
+print()
+print_booking_summary(customer, movie, seats)
+print()
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
@@ -204,9 +218,34 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+print()
 
+def calculate_ticket_cost(num_seats, price_per_seat):
+    total = num_seats * price_per_seat
+    return total
 
+def apply_discount(total, discount_percent):
+    discount = total * (discount_percent / 100)
+    new_total = total - discount
+    return new_total
 
+def display_price(price):
+    print(f"Total cost: £{price}")
+
+seats = 3
+cost = calculate_ticket_cost(seats, 12)
+final_cost = apply_discount(cost, 10)
+display_price = (final_cost)
+
+print(display_price)
+print()
+
+seats = 5
+cost = calculate_ticket_cost(seats, 15)
+final_cost = apply_discount(cost, 15)
+display_price = (final_cost)
+
+print(f"The final cost is £{display_price}")
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
